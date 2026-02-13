@@ -23,7 +23,10 @@ const Login = () => {
         password,
       });
 
+      console.log(response.data);
+
       localStorage.setItem("token", response.data.token);
+
       navigate("/dashboard");
     } catch (err: any) {
       setError(err?.response?.data?.message || "Login failed");

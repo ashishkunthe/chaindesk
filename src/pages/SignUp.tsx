@@ -24,7 +24,7 @@ const Signup = () => {
         email,
         password,
       });
-
+      console.log(response.data);
       localStorage.setItem("token", response.data.token);
       navigate("/dashboard");
     } catch (err: any) {
